@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>X-GORB天气网站</title>
+    <title>手机天气网站</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>天气预报</h1>
-         <div class="search-box">
+        <div class="search-box">
+            <input type="text" id="province-input" placeholder="请输入省份名称">
             <input type="text" id="city-input" placeholder="请输入城市名称">
             <button id="search-button">搜索</button>
         </div>
         <div class="weather-info">
-            <p id="location">请输入城市名称进行搜索</p>
+            <p id="location">请输入省份和城市名称进行搜索</p>
             <p id="temperature">--°C</p>
             <p id="condition">--</p>
             <p id="wind">风向：--</p>
