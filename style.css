@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #e0f7fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
     margin: 0;
     padding: 0;
     display: flex;
@@ -8,46 +8,62 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
+    color: white;
 }
 
 .container {
-    text-align: center;
-    background: #0288d1;
-    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
     width: 90%;
     max-width: 400px;
 }
 
 h1 {
     margin-bottom: 20px;
+    font-size: 28px;
+    letter-spacing: 1px;
 }
 
 .search-box {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     margin-bottom: 20px;
 }
 
+#province-input,
 #city-input {
     padding: 10px;
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    width: 70%;
-    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #search-button {
-    padding: 10px;
-    font-size: 16px;
-    background-color: #007ac1;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: #45a049;
+}
+
+.weather-info {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
 }
 
 .weather-info p {
@@ -55,3 +71,20 @@ h1 {
     font-size: 18px;
 }
 
+.temperature-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#temperature {
+    font-size: 48px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#condition {
+    font-size: 24px;
+    font-weight: 300;
+}
