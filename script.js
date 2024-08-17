@@ -27,15 +27,29 @@ document.addEventListener('DOMContentLoaded', function() {
                     document.getElementById('location').textContent = `${data.sheng} ${data.place}`;
                     document.getElementById('temperature').textContent = `${data.wendu}°C`;
                     document.getElementById('condition').textContent = data.tianqi;
+                    document.getElementById('wind').textContent = `风向：${data.fengxiang}`;
+                    document.getElementById('wind-level').textContent = `风力：${data.fengli}`;
+                    document.getElementById('humidity').textContent = `湿度：${data.humidity}`;
+                    document.getElementById('aqi').textContent = `空气质量指数：${data.aqi}`;
                 } else {
                     document.getElementById('location').textContent = '未找到该城市的天气信息';
-                    document.getElementById('temperature').textContent = '--°C';
-                    document.getElementById('condition').textContent = '--';
+                    resetWeatherInfo();
                 }
             })
             .catch(error => {
                 console.error('获取天气信息失败:', error);
                 document.getElementById('location').textContent = '无法获取天气信息';
+                resetWeatherInfo();
             });
     }
+
+    function resetWeatherInfo() {
+        document.getElementById('temperature').textContent = '--°C';
+        document.getElementById('condition').textContent = '--';
+        document.getElementById('wind').textContent = '风向：--';
+        document.getElementById('wind-level').textContent = '风力：--';
+        document.getElementById('humidity').textContent = '湿度：--';
+        document.getElementById('aqi').textContent = '空气质量指数：--';
+    }
 });
+
