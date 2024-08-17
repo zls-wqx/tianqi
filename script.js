@@ -1,21 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
     const searchButton = document.getElementById('search-button');
     const cityInput = document.getElementById('city-input');
+    const provinceInput = document.getElementById('province-input');
 
     searchButton.addEventListener('click', function() {
         const city = cityInput.value.trim();
+        const province = provinceInput.value.trim();
 
-        if (city) {
-            fetchWeather(city);
+        if (city && province) {
+            fetchWeather(province, city);
         } else {
-            alert('请输入城市名称');
+            alert('请输入省份和城市名称');
         }
     });
 
-    function fetchWeather(city) {
+    function fetchWeather(province, city) {
         const id = '88888888'; // 替换为你的API ID
         const key = '88888888'; // 替换为你的API Key
-        const sheng = '四川'; // 省份可以动态调整
+        const sheng = province;
         const place = city;
 
         const url = `https://cn.apihz.cn/api/tianqi/tqyb.php?id=${id}&key=${key}&sheng=${sheng}&place=${place}`;
@@ -52,4 +54,3 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('aqi').textContent = '空气质量指数：--';
     }
 });
-
