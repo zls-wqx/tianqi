@@ -11,27 +11,7 @@
     <div class="container">
         <h1>X-GORB官方天气查询网站</h1>
         <div class="search-box">
-            <input type="text" id="province-input" placeholder="请输入省份名称">
-            <input type="text" id="city-input" placeholder="请输入城市名称">
-            <button id="search-button">搜索</button>
-                        <button onclick="openWebsite()">打开我们的官方网站</button>
-
-            <script>
-            function openWebsite() {
-            window.open('https://zls-wqx.github.io/guanfang/', '_blank');
-            }
-            </script>
-        </div>
-        <div class="weather-info">
-            <p id="location">请输入省份和城市名称进行搜索</p>
-            <div class="temperature-box">
-                <p id="temperature">--°C</p>
-                <p id="condition">--</p>
-            </div>
-            <p id="wind">风向：--</p>
-            <p id="wind-level">风力：--</p>
-            <p id="humidity">湿度：--</p>
-            <p id="aqi">空气质量指数：--</p>
+           <iframe scrolling="no" src="https://widget.tianqiapi.com/?style=tw&skin=pitaya" frameborder="0" width="300" height="500" allowtransparency="true"></iframe>
     <footer>
       <p>© 2024 X-GORB工作室. 版权所有.</p>
       <p>真理是简单的，它不会因时间而改变。</p>
